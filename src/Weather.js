@@ -76,10 +76,10 @@ class WeatherPage extends React.Component {
             <Grid item xs={10}>
               <Paper style={{ margin: 10, padding: 10 }}>
                 <img style={{ height: "300px", width: "100%", justifyContent: "center" }} src={require(`./components/${data.location.name}.jpg`)} alt="item" />
-                <div>{data.location.localtime}</div>
 
                 <form autoComplete="off" /*onSubmit={this.handleSubmit}*/>
-                  <FormControl>
+                  <div style={{ marginLeft: "43%" }}>{data.location.localtime}</div>
+                  <FormControl style={{ marginLeft: "46%" }}>
                     <InputLabel
                       htmlFor="countries"
                       style={{ marginTop: 5, marginBottom: 5, fontSize: 20 }}
@@ -129,15 +129,7 @@ class WeatherPage extends React.Component {
             </Grid>
           </Grid>
           <Forecast forecasts={forecastList} />
-
         </Grid>
-
-
-        {/*  <Grid item sm={2}>
-            <Paper style={paperStyle.Paper}>Twitter</Paper>
-          </Grid> */}
-
-
       </Container>
     );
   }
